@@ -28,6 +28,7 @@ def printdiamond(n, current_row):
         printspace(n-current_row)
         printstar(current_row)
         print()
-     
-n = float(input("Enter number of rows: "))
-printdiamond(n, 1)
+
+if __name__ == "__main__":
+    n = float(input("Enter number of rows: "))
+    printdiamond(n, 1)
