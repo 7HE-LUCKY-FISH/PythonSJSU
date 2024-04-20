@@ -128,41 +128,11 @@ def dfs(visited,curcord):
                 
     return False
     
-    
-        
-# def dfs(x, y, path, maze, Pf):
-#     if x < 0 or x >= len(maze) or y < 0 or y >= len(maze[0]) or maze[x][y] != 1 or maze[x][y] == -1:
-#         return False
-
-#     path.append((x, y))
-#     # print(path)
-#     if (x, y) == Pf:
-#         return True
-
-#     maze[x][y] = -1
-
-#     if (dfs(x + 1, y, path, maze, Pf) or
-#         dfs(x - 1, y, path, maze, Pf) or
-#         dfs(x, y + 1, path, maze, Pf) or
-#         dfs(x, y - 1, path, maze, Pf)):
-#         return True
-
-#     maze[x][y] = 1
-#     path.pop()
-#     return False
 
 def find_path():
     global maze
     vis=[[False for _ in range(len(maze))] for _ in range(len(maze))]
-    
     dfs(vis,(0,0))
-    #     return path 
-    # if dfs(1, 0, path, maze, Pf):
-    #     print(path)
-    #     return path 
-#   dfs(P0[0]+1, P0[1], path, maze, Pf)
-    # print(path)
-    # return path
 
 if __name__ == "__main__":
     n = int(input("Enter the size of the maze (n x n): "))
